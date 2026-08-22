@@ -1,4 +1,4 @@
-// NAV: fondo sólido al hacer scroll
+// NAV: fixed state on scroll
 const nav = document.getElementById("siteNav");
 
 function updateNav() {
@@ -7,75 +7,6 @@ function updateNav() {
 
 window.addEventListener("scroll", updateNav, { passive: true });
 updateNav();
-
-// MENÚ MÓVIL
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
-const closeMenu = document.getElementById("closeMenu");
-
-hamburger.addEventListener("click", () => {
-  mobileMenu.classList.add("open");
-  document.body.style.overflow = "hidden";
-});
-
-function closeMobileMenu() {
-  mobileMenu.classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-closeMenu.addEventListener("click", closeMobileMenu);
-
-mobileMenu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", closeMobileMenu);
-});
-
-// CARRUSEL DE ACTIVIDADES
-const scrollTrack = document.getElementById("actividadesScroll");
-const btnLeft = document.getElementById("scrollLeft");
-const btnRight = document.getElementById("scrollRight");
-const STEP = 310;
-
-function updateButtons() {
-  btnLeft.classList.toggle(
-    "hidden",
-    scrollTrack.scrollLeft <= 0
-  );
-  btnRight.classList.toggle(
-    "hidden",
-    scrollTrack.scrollLeft + scrollTrack.clientWidth >=
-      scrollTrack.scrollWidth - 1
-  );
-}
-
-btnLeft.addEventListener("click", () => {
-  scrollTrack.scrollBy({ left: -STEP, behavior: "smooth" });
-});
-
-btnRight.addEventListener("click", () => {
-  scrollTrack.scrollBy({ left: STEP, behavior: "smooth" });
-});
-
-scrollTrack.addEventListener("scroll", updateButtons, { passive: true });
-window.addEventListener("resize", updateButtons);
-updateButtons();
-
-// APARICIÓN AL HACER SCROLL
-const revealTargets = document.querySelectorAll("[data-reveal]");
-
-if (revealTargets.length) {
-  const observer = new IntersectionObserver(
-    (entries, observerInstance) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observerInstance.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
-  );
-
-  revealTargets.forEach((target) => observer.observe(target));
-}
 
 // LIGHTBOX
 const galleryItems = Array.from(
@@ -114,35 +45,19 @@ function updateLightboxButtons() {
 }
 
 galleryItems.forEach((img) => {
-  img.parentElement.addEventListener("click", () => {
-    openLightbox(galleryItems.indexOf(img));
-  });
-});
+  img.parentElement.addEventListener("click", () => openLightbox(galleryItems.indexOf(img));
+);
 
 lightboxClose.addEventListener("click", closeLightbox);
 
-lightboxPrev.addEventListener("click", (e) => {
-  e.stopPropagation();
+lightboxPrev.addEventListener("click", () => {
   if (currentIndex > 0) openLightbox(currentIndex - 1);
 });
 
-lightboxNext.addEventListener("click", (e) => {
-  e.stopPropagation();
-  if (currentIndex < galleryItems.length - 1) openLightbox(currentIndex + 1);
-});
-
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
-
-document.addEventListener("keydown", (e) => {
-  if (!lightbox.classList.contains("open")) return;
-  if (e.key === "Escape") closeLightbox();
-  if (e.key === "ArrowLeft" && currentIndex > 0)
-    openLightbox(currentIndex - 1);
-  if (e.key === "ArrowRight" && currentIndex < galleryItems.length - 1)
+lightboxNext.addEventListener("click", () => {
+  if (currentIndex < galleryItems.length - 1)
     openLightbox(currentIndex + 1);
-});
+);
 
 // AÑO ACTUAL EN EL FOOTER
 document.getElementById("year").textContent =
