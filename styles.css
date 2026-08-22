@@ -286,7 +286,7 @@ html.js-enabled [data-reveal].is-visible {
   transform: scaleX(1);
 }
 
-.hamburger {
+
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -296,7 +296,7 @@ html.js-enabled [data-reveal].is-visible {
   padding: 4px;
 }
 
-.hamburger span {
+
   display: block;
   width: 22px;
   height: 2px;
@@ -1049,7 +1049,7 @@ html.js-enabled [data-reveal].is-visible {
     display: none;
   }
 
-  .hamburger {
+  
     display: flex;
   }
 
