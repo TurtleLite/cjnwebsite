@@ -1,16 +1,31 @@
 <!doctype html>
-<html lang="es" data-theme="light">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cofradía de Jesús Nazareno</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Cofradía de Jesús Nazareno · Templo San Francisco, Comayagua</title>
+    <meta
+      name="description"
+      content="Cofradía de Jesús Nazareno del Templo San Francisco de Comayagua, Honduras. Custodia y veneración de la Consagrada Imagen de Jesús Nazareno desde 2007."
+    />
+    <meta name="theme-color" content="#3d0f1e" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <meta property="og:title" content="Cofradía de Jesús Nazareno" />
+    <meta
+      property="og:description"
+      content="Custodia y veneración de la Consagrada Imagen de Jesús Nazareno · Templo San Francisco, Comayagua, Honduras"
+    />
+    <meta property="og:image" content="assets/logo-cjn-512.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_HN" />
     <script>
       document.documentElement.classList.add("js-enabled");
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:wght@700;800;900&family=Source+Serif+4:wght@400;600&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -20,129 +35,172 @@
     />
   </head>
   <body>
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-      <button class="close-btn" id="closeMenu" aria-label="Cerrar menú">
-        ✕
-      </button>
-      <a href="#inicio" onclick="closeMobileMenu()">INICIO</a>
-      <a href="#historia" onclick="closeMobileMenu()">HISTORIA</a>
-      <a href="#actividades" onclick="closeMobileMenu()">ACTIVIDADES</a>
-      <a href="#fotogaleria" onclick="closeMobileMenu()">FOTOGALERÍA</a>
-      <a href="#contacto" onclick="closeMobileMenu()">CONTACTO</a>
-    </div>
-
     <!-- NAV -->
-    <nav id="inicio">
+    <nav class="site-nav" id="siteNav">
       <a href="#inicio" class="nav-logo">
-        <!-- Cross SVG Logo -->
-        <svg
-          viewBox="0 0 36 36"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="CJN Logo"
-        >
-          <rect x="15.5" y="3" width="5" height="30" rx="2" fill="#8b2020" />
-          <rect x="7" y="11" width="22" height="5" rx="2" fill="#8b2020" />
-          <circle
-            cx="18"
-            cy="18"
-            r="16"
-            stroke="#8b2020"
-            stroke-width="1.5"
-            fill="none"
-            stroke-dasharray="3 3"
-          />
-        </svg>
-        CJN
+        <img src="assets/logo-nav.png" alt="" width="44" height="44" />
+        <span class="logo-text">Cofradía CJN</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#inicio">INICIO</a></li>
-        <li><a href="#historia">HISTORIA</a></li>
-        <li><a href="#actividades">ACTIVIDADES</a></li>
-        <li><a href="#fotogaleria">FOTOGALERIA</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#restauracion">Restauración</a></li>
+        <li><a href="#actividades">Actividades</a></li>
+        <li><a href="#fotogaleria">Fotogalería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
     </nav>
 
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-btn" id="closeMenu" aria-label="Cerrar menú">
+        ✕
+      </button>
+      <a href="#inicio">INICIO</a>
+      <a href="#historia">HISTORIA</a>
+      <a href="#restauracion">RESTAURACIÓN</a>
+      <a href="#actividades">ACTIVIDADES</a>
+      <a href="#fotogaleria">FOTOGALERÍA</a>
+      <a href="#contacto">CONTACTO</a>
+    </div>
+
     <!-- HERO -->
-    <section style="padding-top: 2.5rem; background: var(--bg)" data-reveal>
-      <div class="hero">
+    <header class="hero" id="inicio">
+      <img
+        class="hero-bg"
+        src="assets/hero-restauracion.jpg"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="eyebrow hero-eyebrow"
+          >Templo San Francisco · Comayagua, Honduras</span
+        >
         <h1>Cofradía de Jesús Nazareno</h1>
-        <p>
+        <div class="divider" aria-hidden="true">
+          <span></span><i class="diamond"></i><span></span>
+        </div>
+        <p class="hero-lead">
           Hermandad encargada de la custodia y veneración de la Consagrada
-          Imagen de Jesus Nazareno del Templo San Francisco de Santa Maria de
+          Imagen de Jesús Nazareno del Templo San Francisco de Santa María de
           Comayagua de la Nueva Valladolid.
         </p>
-        <div class="hero-img-wrap">
-          <img
-            src="assets/hero.jpg"
-            alt="Procesión del Santo Viacrucis - Cofradía de Jesús Nazareno"
-            width="740"
-            height="440"
-            loading="lazy"
-          />
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#actividades">Actividades</a>
+          <a class="btn btn-ghost" href="#historia">Nuestra historia</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#historia" aria-label="Bajar a Historia">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="5 9 12 16 19 9" />
+        </svg>
+      </a>
+    </header>
+
+    <!-- HISTORIA -->
+    <section class="section historia" id="historia" data-reveal>
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">Fe · Tradición · Servicio</span>
+          <h2>Nuestra Historia</h2>
+          <div class="divider" aria-hidden="true">
+            <span></span><i class="diamond"></i><span></span>
+          </div>
+        </div>
+        <div class="historia-grid">
+          <div class="historia-text">
+            <p>
+              La Cofradía de Jesús Nazareno es un grupo de jóvenes fundado en
+              2007 con el propósito de promover la formación personal y
+              espiritual a través del estudio bíblico y la devoción al
+              Nazareno. Este grupo está vinculado a la Iglesia de San Francisco
+              de Comayagua, una de las iglesias más antiguas de Honduras,
+              construida en 1574 y considerada la segunda orden eclesiástica
+              más antigua de la ciudad.
+            </p>
+            <p>
+              La Cofradía se encarga de preparar y llevar la venerada imagen de
+              Jesús Nazareno, tallada en el siglo XVII, durante la procesión
+              del Santo Viacrucis el Viernes Santo. Este evento es el momento
+              cumbre de la Semana Santa en Comayagua, con un recorrido que
+              inicia a las 8:00 a.m. en el Templo San Francisco y concluye
+              alrededor del mediodía en el mismo Templo.
+            </p>
+          </div>
+          <figure class="historia-figure frame-gold">
+            <img
+              class="historia-img"
+              src="assets/historia-nazareno.jpg"
+              alt="La Consagrada Imagen de Jesús Nazareno restaurada"
+              width="1100"
+              height="1374"
+              loading="lazy"
+            />
+            <figcaption>La Imagen restaurada · 2026</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- GREEN BAND transition -->
-    <div class="green-band"></div>
-
-    <!-- HISTORIA -->
-    <section class="historia" id="historia" data-reveal>
-      <div class="historia-inner">
-        <div class="historia-text">
-          <h2>Historia</h2>
-          <p>
-            La Cofradía de Jesús Nazareno es un grupo de jóvenes fundado en 2007
-            con el propósito de promover la formación personal y espiritual a
-            través del estudio bíblico y la devoción al Nazareno. Este grupo
-            está vinculado a la Iglesia de San Francisco de en Comayagua, una de
-            las iglesias más antiguas de Honduras, construida en 1574 y
-            considerada la segunda orden eclesiástica más antigua de la ciudad.
-          </p>
-          <p>
-            La Cofradía se encarga de preparar y llevar la venerada imagen de
-            Jesús Nazareno, tallada en el siglo XVII, durante la procesión del
-            Santo Viacrucis el Viernes Santo. Este evento es el momento cumbre
-            de la Semana Santa en Comayagua, con un recorrido que inicia a las
-            8:00 a.m. en el Templo San Francisco y concluye alrededor del
-            mediodía en el mismo Templo.
+    <!-- RESTAURACION -->
+    <section class="section restauracion" id="restauracion" data-reveal>
+      <div class="section-inner">
+        <div class="section-head on-dark">
+          <span class="eyebrow">Arte · Fe · Patrimonio</span>
+          <h2>La Restauración</h2>
+          <div class="divider divider-gold" aria-hidden="true">
+            <span></span><i class="diamond"></i><span></span>
+          </div>
+          <p class="section-lead">
+            La venerada imagen talla del siglo XVII fue sometida a un riguroso
+            proceso de restauración para conservar su patrimonio para las
+            generaciones venideras.
           </p>
         </div>
-        <img
-          class="historia-img"
-          src="assets/sec2.jpeg"
-          alt="Imagen de Jesús Nazareno"
-          width="600"
-          height="500"
-          loading="lazy"
-        />
+        <div class="restauracion-grid">
+          <figure class="rest-item tall">
+            <img src="assets/restauracion/r2.jpg" alt="Rostro de Jesús Nazareno tras la restauración" loading="lazy" />
+          </figure>
+          <figure class="rest-item">
+            <img src="assets/restauracion/r3.jpg" alt="Detalle del rostro junto a la ventana" loading="lazy" />
+          </figure>
+          <figure class="rest-item">
+            <img src="assets/restauracion/r1.jpg" alt="La Imagen en penumbra" loading="lazy" />
+          </figure>
+          <figure class="rest-item wide">
+            <img src="assets/hero-restauracion.jpg" alt="La Imagen en el patio colonial" loading="lazy" />
+          </figure>
+          <figure class="rest-item">
+            <img src="assets/restauracion/r5.jpg" alt="Detalle de la corona de espinas" loading="lazy" />
+          </figure>
+          <figure class="rest-item">
+            <img src="assets/restauracion/r4.jpg" alt="Procesión de la Imagen por el jardín" loading="lazy" />
+          </figure>
+        </div>
       </div>
     </section>
 
     <!-- ACTIVIDADES -->
-    <section class="actividades" id="actividades" data-reveal>
-      <div class="actividades-inner">
+    <section class="section actividades" id="actividades" data-reveal>
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">Vida de la hermandad</span>
+          <h2>Actividades</h2>
+          <div class="divider" aria-hidden="true">
+            <span></span><i class="diamond"></i><span></span>
+          </div>
+        </div>
         <div class="actividades-wrapper">
           <button
             class="scroll-btn scroll-left"
             id="scrollLeft"
             aria-label="Scroll izquierda"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="15 18 9 12 15 6" />
             </svg>
           </button>
@@ -159,10 +217,9 @@
               <div class="actividad-body">
                 <h3>Noche Franciscana</h3>
                 <p>
-                  Esta actividad se compone de Eucaristía, Hora Santa,
-                  Confesiones, Formación en la Fe, cada ultimo viernes de cada
-                  mes a las 6:00PM en el Templo San Francisco, esta se lleva a
-                  cabo junto a los Frailes Franciscanos de la Renovación.
+                  Eucaristía, Hora Santa, Confesiones y Formación en la Fe cada
+                  último viernes de mes, 6:00 p.m., en el Templo San Francisco,
+                  junto a los Frailes Franciscanos de la Renovación.
                 </p>
               </div>
             </div>
@@ -178,10 +235,9 @@
               <div class="actividad-body">
                 <h3>Rosario de Hombres</h3>
                 <p>
-                  Por la reintegración de la masculinidad en la iglesia
-                  católica, rezamos el Santo Rosario de varones cada primer
-                  sábado de cada mes en el atrio de la Catedral de Comayagua, a
-                  las 4:00PM.
+                  Por la reintegración de la masculinidad en la Iglesia:
+                  rezamos el Santo Rosario de varones cada primer sábado de mes
+                  en el atrio de la Catedral de Comayagua, a las 4:00 p.m.
                 </p>
               </div>
             </div>
@@ -197,11 +253,10 @@
               <div class="actividad-body">
                 <h3>Triduo Franciscano</h3>
                 <p>
-                  Actividad compuesta de 3 días en los que son dedicadas a San
-                  Francisco de Asís, misa, veneración de la reliquia en primer
-                  grado, predica, eucaristía y procesión, las fechas son el 2, 3
-                  y 4 de octubre, son realizadas en el Templo San Francisco
-                  acompañados de los Frailes Franciscanos de la Renovación.
+                  Tres días dedicados a San Francisco de Asís: misa, veneración
+                  de la reliquia en primer grado, prédica, eucaristía y
+                  procesión. Los días 2, 3 y 4 de octubre en el Templo San
+                  Francisco.
                 </p>
               </div>
             </div>
@@ -217,10 +272,9 @@
               <div class="actividad-body">
                 <h3>Concierto de Marchas Fúnebres</h3>
                 <p>
-                  Se realiza en honor a la Consagrada Imagen de Jesus Nazareno,
-                  se lleva a cabo el Miércoles Santo a las 7:00PM en el Templo
-                  San Francisco, las marchas fúnebres son ejecutadas por la
-                  Banda de Comayagua.
+                  En honor a la Consagrada Imagen de Jesús Nazareno, Miércoles
+                  Santo a las 7:00 p.m. en el Templo San Francisco, ejecutadas
+                  por la Banda de Comayagua.
                 </p>
               </div>
             </div>
@@ -236,11 +290,10 @@
               <div class="actividad-body">
                 <h3>Huerto</h3>
                 <p>
-                  Representación del momento en que Jesus esta con sus
-                  discípulos en el monte de los Olivos y lo apresan, se lleva a
-                  cabo en el Museo de Antropología e Historia el Jueves Santo de
-                  10:00AM a 6:00PM, donde pueden adquirir algodones con los que
-                  se limpia la Consagrada Imagen de Jesus Nazareno.
+                  Representación de la oración y aprehensión en el monte de los
+                  Olivos. Jueves Santo de 10:00 a.m. a 6:00 p.m. en el Museo de
+                  Antropología e Historia; allí pueden adquirirse los algodones
+                  con que se limpia la Imagen.
                 </p>
               </div>
             </div>
@@ -256,11 +309,10 @@
               <div class="actividad-body">
                 <h3>Santo Viacrucis</h3>
                 <p>
-                  Jesus Nazareno sale a bendecir las calles de Comayagua el
-                  viernes santo, los penitentes portan en hombros el anda
-                  procesional con la Consagrada Imagen de Jesus Nazareno, el
-                  Santo Viacrucis inicia a las 8:00AM en el Templo y finaliza en
-                  el mismo alrededor del mediodía.
+                  Jesús Nazareno sale a bendecir las calles de Comayagua el
+                  Viernes Santo. Los penitentes portan en hombros el anda
+                  procesional; inicia a las 8:00 a.m. en el Templo y finaliza
+                  allí alrededor del mediodía.
                 </p>
               </div>
             </div>
@@ -271,16 +323,7 @@
             id="scrollRight"
             aria-label="Scroll derecha"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="9 18 15 12 9 6" />
             </svg>
           </button>
@@ -289,369 +332,134 @@
     </section>
 
     <!-- FOTOGALERIA -->
-    <section class="fotogaleria" id="fotogaleria" data-reveal>
-      <div class="fotogaleria-inner">
-        <h2>Fotogalería</h2>
-        <p class="subtitle">
-          Compartimos diferentes imágenes del Santo Viacrucis.
-        </p>
+    <section class="section fotogaleria" id="fotogaleria" data-reveal>
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">Semana Santa en Comayagua</span>
+          <h2>Fotogalería</h2>
+          <div class="divider" aria-hidden="true">
+            <span></span><i class="diamond"></i><span></span>
+          </div>
+          <p class="section-lead muted">
+            Momentos del Santo Viacrucis, las procesiones y la devoción al
+            Nazareno.
+          </p>
+        </div>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img
-              src="assets/fotogaleria/1.webp"
-              alt="Jesús Nazareno con cruz"
-              width="300"
-              height="175"
-              loading="lazy"
-            />
+            <img src="assets/fotogaleria/1.webp" alt="Jesús Nazareno con cruz" width="300" height="175" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img
-              src="assets/fotogaleria/2.webp"
-              alt="Procesión en la calle"
-              width="300"
-              height="175"
-              loading="lazy"
-            />
+            <img src="assets/g-procesion.jpg" alt="La Imagen en procesión con túnica dorada" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/fotogaleria/2.webp" alt="Procesión en la calle" width="300" height="175" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/g-cielo.jpg" alt="La cruz contra el cielo" loading="lazy" />
           </div>
           <div class="gallery-item tall">
-            <img
-              src="assets/fotogaleria/3.webp"
-              alt="Imagen Jesús Nazareno dorado"
-              width="300"
-              height="364"
-              loading="lazy"
-            />
+            <img src="assets/fotogaleria/3.webp" alt="Imagen de Jesús Nazareno dorado" width="300" height="364" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img
-              src="assets/fotogaleria/4.webp"
-              alt="Procesión del Viacrucis"
-              width="300"
-              height="175"
-              loading="lazy"
-            />
+            <img src="assets/g-rostro.jpg" alt="El rostro del Nazareno" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img
-              src="assets/fotogaleria/5.webp"
-              alt="Cofrades en procesión"
-              width="300"
-              height="175"
-              loading="lazy"
-            />
+            <img src="assets/fotogaleria/4.webp" alt="Procesión del Viacrucis" width="300" height="175" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img
-              src="assets/fotogaleria/6.webp"
-              alt="Cofrades con hábito"
-              width="300"
-              height="175"
-              loading="lazy"
-            />
+            <img src="assets/g-cruz.jpg" alt="La santa cruz con tela morada" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/fotogaleria/5.webp" alt="Cofrades en procesión" width="300" height="175" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/g-templo.jpg" alt="El Templo San Francisco" loading="lazy" />
           </div>
           <div class="gallery-item tall">
-            <img
-              src="assets/fotogaleria/7.webp"
-              alt="Imagen devocional"
-              width="300"
-              height="364"
-              loading="lazy"
-            />
+            <img src="assets/fotogaleria/7.webp" alt="Imagen devocional" width="300" height="364" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img
-              src="assets/fotogaleria/8.webp"
-              alt="Iglesia San Francisco"
-              width="300"
-              height="175"
-              loading="lazy"
-            />
+            <img src="assets/fotogaleria/6.webp" alt="Cofrades con hábito" width="300" height="175" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img
-              src="assets/fotogaleria/9.webp"
-              alt="Viacrucis Comayagua"
-              width="300"
-              height="175"
-              loading="lazy"
-            />
+            <img src="assets/fotogaleria/8.webp" alt="Iglesia San Francisco" width="300" height="175" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img
-              src="assets/fotogaleria/10.webp"
-              alt="Cofrades en fila"
-              width="300"
-              height="175"
-              loading="lazy"
-            />
+            <img src="assets/fotogaleria/9.webp" alt="Viacrucis Comayagua" width="300" height="175" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img
-              src="assets/fotogaleria/11.webp"
-              alt="Cofrades en fila"
-              width="300"
-              height="175"
-              loading="lazy"
-            />
+            <img src="assets/fotogaleria/10.webp" alt="Cofrades en fila" width="300" height="175" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/fotogaleria/11.webp" alt="Cofrades en fila" width="300" height="175" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- REDES SOCIALES -->
-    <section class="social-section" data-reveal>
-      <p>Encuéntranos en Redes Sociales y se parte de esta misión.</p>
-      <div class="social-icons">
-        <a
-          href="https://www.facebook.com/CofradiadeJesusNazareno"
-          aria-label="Facebook"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="socicon socicon-facebook"></i>
-        </a>
-        <a
-          href="https://www.instagram.com/cofradia_de_jesus_nazareno_cjn"
-          aria-label="Instagram"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="socicon socicon-instagram"></i>
-        </a>
-        <a
-          href="https://youtube.com/@cofradiajesusnazareno"
-          aria-label="YouTube"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="socicon socicon-youtube"></i>
-        </a>
-        <a
-          href="https://www.tiktok.com/@cofradiajesusnazareno"
-          aria-label="TikTok"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path
-              d="M16.5 3.5c.7 1.8 2 3 3.9 3.2v3.1c-1.3.1-2.5-.2-3.6-.8v6.1c0 3.6-2.9 6.6-6.5 6.6S3.8 18.6 3.8 15s2.9-6.6 6.5-6.6c.3 0 .6 0 .9.1v3.4c-.3-.1-.6-.2-.9-.2-1.7 0-3.1 1.4-3.1 3.2s1.4 3.2 3.1 3.2 3.1-1.4 3.1-3.2V3.5h3.1z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://wa.me/50497666953"
-          aria-label="WhatsApp"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="socicon socicon-whatsapp"></i>
-        </a>
+    <!-- CONTACTO / REDES -->
+    <section class="section contacto" id="contacto" data-reveal>
+      <div class="section-inner contacto-inner">
+        <span class="eyebrow gold">Acompáñanos</span>
+        <h2>Contacto</h2>
+        <div class="divider divider-gold" aria-hidden="true">
+          <span></span><i class="diamond"></i><span></span>
+        </div>
+        <p class="section-lead">
+          Encuéntranos en redes sociales y sé parte de esta misión.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/CofradiadeJesusNazareno" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="socicon socicon-facebook"></i></a>
+          <a href="https://www.instagram.com/cofradia_de_jesus_nazareno_cjn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="socicon socicon-instagram"></i></a>
+          <a href="https://youtube.com/@cofradiajesusnazareno" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="socicon socicon-youtube"></i></a>
+          <a href="https://www.tiktok.com/@cofradiajesusnazareno" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M16.5 3.5c.7 1.8 2 3 3.9 3.2v3.1c-1.3.1-2.5-.2-3.6-.8v6.1c0 3.6-2.9 6.6-6.5 6.6S3.8 18.6 3.8 15s2.9-6.6 6.5-6.6c.3 0 .6 0 .9.1v3.4c-.3-.1-.6-.2-.9-.2-1.7 0-3.1 1.4-3.1 3.2s1.4 3.2 3.1 3.2 3.1-1.4 3.1-3.2V3.5h3.1z"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/50497666953" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="socicon socicon-whatsapp"></i></a>
+        </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-      <p>
-        © 2026 <span>Cofradía de Jesús Nazareno</span> · Comayagua, Honduras
-      </p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="assets/logo-cjn-512.png" alt="Logo CJN" width="72" height="72" />
+          <div>
+            <strong>Cofradía de Jesús Nazareno</strong>
+            <span>Templo San Francisco · Comayagua, Honduras</span>
+          </div>
+        </div>
+        <nav class="footer-links" aria-label="Enlaces">
+          <a href="#inicio">Inicio</a>
+          <a href="#historia">Historia</a>
+          <a href="#restauracion">Restauración</a>
+          <a href="#actividades">Actividades</a>
+          <a href="#fotogaleria">Fotogalería</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Cofradía de Jesús Nazareno · Comayagua, Honduras</p>
+      </div>
     </footer>
 
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const closeMenu = document.getElementById("closeMenu");
-
-      hamburger.addEventListener("click", () =>
-        mobileMenu.classList.add("open"),
-      );
-      closeMenu.addEventListener("click", () =>
-        mobileMenu.classList.remove("open"),
-      );
-      function closeMobileMenu() {
-        mobileMenu.classList.remove("open");
-      }
-    </script>
-
-    <script>
-      const scroll = document.getElementById("actividadesScroll");
-      const btnLeft = document.getElementById("scrollLeft");
-      const btnRight = document.getElementById("scrollRight");
-      const STEP = 310; // card width + gap
-
-      function updateButtons() {
-        btnLeft.classList.toggle("hidden", scroll.scrollLeft <= 0);
-        btnRight.classList.toggle(
-          "hidden",
-          scroll.scrollLeft + scroll.clientWidth >= scroll.scrollWidth - 1,
-        );
-      }
-
-      btnLeft.addEventListener("click", () => {
-        scroll.scrollBy({ left: -STEP, behavior: "smooth" });
-      });
-      btnRight.addEventListener("click", () => {
-        scroll.scrollBy({ left: STEP, behavior: "smooth" });
-      });
-
-      scroll.addEventListener("scroll", updateButtons);
-      window.addEventListener("resize", updateButtons);
-
-      // Init — hide left button on load since we start at the left edge
-      updateButtons();
-    </script>
-
     <!-- LIGHTBOX -->
-    <div
-      class="lightbox"
-      id="lightbox"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Imagen ampliada"
-    >
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
       <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-        >
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
+        ✕
       </button>
-      <button
-        class="lightbox-nav lightbox-prev"
-        id="lightboxPrev"
-        aria-label="Anterior"
-      >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-        >
-          <polyline points="15 18 9 12 15 6" />
-        </svg>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">
+        ‹
       </button>
       <img class="lightbox-img" id="lightboxImg" src="" alt="" />
-      <button
-        class="lightbox-nav lightbox-next"
-        id="lightboxNext"
-        aria-label="Siguiente"
-      >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-        >
-          <polyline points="9 18 15 12 9 6" />
-        </svg>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">
+        ›
       </button>
     </div>
 
-    <script>
-      // LIGHTBOX
-      const galleryItems = Array.from(
-        document.querySelectorAll(".gallery-item img"),
-      );
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightboxImg");
-      const lightboxClose = document.getElementById("lightboxClose");
-      const lightboxPrev = document.getElementById("lightboxPrev");
-      const lightboxNext = document.getElementById("lightboxNext");
-      let currentIndex = 0;
-
-      function openLightbox(index) {
-        currentIndex = index;
-        lightboxImg.src = galleryItems[index].src;
-        lightboxImg.alt = galleryItems[index].alt;
-        lightbox.classList.add("open");
-        document.body.style.overflow = "hidden";
-        updateNavButtons();
-      }
-
-      function closeLightbox() {
-        lightbox.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-
-      function updateNavButtons() {
-        lightboxPrev.classList.toggle("hidden", currentIndex === 0);
-        lightboxNext.classList.toggle(
-          "hidden",
-          currentIndex === galleryItems.length - 1,
-        );
-      }
-
-      galleryItems.forEach((img, i) => {
-        img.parentElement.addEventListener("click", () => openLightbox(i));
-      });
-
-      lightboxClose.addEventListener("click", closeLightbox);
-
-      lightboxPrev.addEventListener("click", () => {
-        if (currentIndex > 0) openLightbox(currentIndex - 1);
-      });
-
-      lightboxNext.addEventListener("click", () => {
-        if (currentIndex < galleryItems.length - 1)
-          openLightbox(currentIndex + 1);
-      });
-
-      // Close on backdrop click
-      lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) closeLightbox();
-      });
-
-      // Keyboard support
-      document.addEventListener("keydown", (e) => {
-        if (!lightbox.classList.contains("open")) return;
-        if (e.key === "Escape") closeLightbox();
-        if (e.key === "ArrowLeft" && currentIndex > 0)
-          openLightbox(currentIndex - 1);
-        if (e.key === "ArrowRight" && currentIndex < galleryItems.length - 1)
-          openLightbox(currentIndex + 1);
-      });
-    </script>
-
-    <script>
-      const revealTargets = document.querySelectorAll("[data-reveal]");
-
-      if (revealTargets.length) {
-        const observer = new IntersectionObserver(
-          (entries, observerInstance) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
-              entry.target.classList.add("is-visible");
-              observerInstance.unobserve(entry.target);
-            });
-          },
-          {
-            threshold: 0.16,
-            rootMargin: "0px 0px -8% 0px",
-          },
-        );
-
-        revealTargets.forEach((target) => observer.observe(target));
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
