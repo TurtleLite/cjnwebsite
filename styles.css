@@ -423,7 +423,7 @@ html.js-enabled [data-reveal].is-visible {
 
 .section-head h2 {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(1.95rem, 4.6vw, 2.9rem);
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -771,7 +771,7 @@ html.js-enabled [data-reveal].is-visible {
 
 .contacto h2 {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(1.95rem, 4.6vw, 2.9rem);
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
